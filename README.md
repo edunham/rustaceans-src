@@ -16,6 +16,28 @@ The `rustaceans.org` directory contains the frontend; `index.html` is the entry
 point. This is an ember.js app and is entirely client-based. It uses the
 backend's API to get data.
 
+## Deploying backend
+
+In the `backend` directory of this repo:
+
+`npm install`
+
+Create `config.json` of the form:
+
+```
+{
+    "repo": "/repos/nrc/rustaceans.org",
+    "token": "abc123",
+    "username": "quux"
+}
+```
+
+Run `node init.js` then `forever rustaceans.js`
+
+Edit the files in `rustaceans.org/js` to point at the place you're running
+`rustaceans.js`, in stead of ncameron.org.
+
+
 ## License
 
 All files in this repository are copyright 2014 rustaceans.org developers.
